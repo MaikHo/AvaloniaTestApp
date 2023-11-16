@@ -1,4 +1,5 @@
 '''cs
+
 Verbose, Debug, Infomation, Warning, Error, Fatal
         
 // string

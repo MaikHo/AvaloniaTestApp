@@ -1,4 +1,5 @@
 ﻿using Avalonia;
+using Avalonia.Logging;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
@@ -49,5 +50,8 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
-            .LogToTrace();
+            .LogToTrace(LogEventLevel.Debug, 
+                        LogArea.Layout, LogArea.Binding, LogArea.Control, LogArea.Platform, 
+                        LogArea.LinuxFramebufferPlatform, LogArea.macOSPlatform
+                        );
 }
